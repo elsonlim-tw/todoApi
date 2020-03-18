@@ -83,4 +83,17 @@ describe("/todo", () => {
       title: "new title"
     });
   });
+
+  it("PATCH /:id should not update an item with invalid field", async () => {
+    await todos.insertMany(getTodoItems());
+    const todoToUpdate = await todos.findOne();
+
+    await request
+      .patch(`/todo/${todoToUpdate._id}`)
+      .send({ apple: "apple" })
+      .set("Content-Type", "application/json");
+
+    const updateTodo = await todos.findOne({ _id: todoToUpdate._id });
+    expect(updateTodo.apple).toBe(undefined);
+  });
 });
