@@ -1,6 +1,8 @@
 const { MongoClient } = require("mongodb");
 const mongoose = require("mongoose");
 
+let connection;
+
 beforeAll(async () => {
   if (!process.env.MONGO_URL) {
     throw new Error("MONGO_URL missing");
