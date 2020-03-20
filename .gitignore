@@ -6,3 +6,6 @@ coverage/
 
 # environment
 .env
+
+# developer env
+.vscode
