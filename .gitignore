@@ -1,8 +1,11 @@
 # dependencies
 node_modules/
 
-# coverage
+# test
+.scannerwork/
 coverage/
+sonar-project.properties
+test-report.xml
 
 # environment
 .env

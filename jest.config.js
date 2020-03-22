@@ -8,5 +8,6 @@ module.exports = {
       statements: 90
     }
   },
-  setupFilesAfterEnv: ["./src/utils/db-test-setup.js"]
+  setupFilesAfterEnv: ["./src/test-init/db-test-setup.js"],
+  testResultsProcessor: "jest-sonar-reporter"
 };
