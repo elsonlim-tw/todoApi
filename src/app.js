@@ -4,13 +4,7 @@ const app = express();
 require("./utils/db.js");
 const todoRouter = require("./router/todo.route");
 
-app.use(
-  cors({
-    origin: "localhost:3000",
-    methods: ["GET"],
-    allowedHeaders: ["Content-Type"]
-  })
-);
+app.use(cors());
 app.use(express.json());
 
 app.use("/todo", todoRouter);

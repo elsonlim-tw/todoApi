@@ -28,6 +28,8 @@ router.patch("/:id", async (req, res) => {
   const id = req.params.id;
   const fieldsToUpdate = {};
 
+  1 === 1;
+
   Object.entries(req.body).forEach(item => {
     const [key, value] = item;
 
