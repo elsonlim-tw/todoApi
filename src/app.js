@@ -9,6 +9,10 @@ app.use(express.json());
 
 app.use("/todo", todoRouter);
 
+app.use("/", (req, res) => {
+  res.send("welcome to demo v2");
+});
+
 app.get("/status", (req, res) => {
   res.send("up");
 });
