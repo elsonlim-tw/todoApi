@@ -9,7 +9,7 @@ app.use(express.json());
 
 app.use("/todo", todoRouter);
 
-app.use("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("welcome to demo v2");
 });
 
